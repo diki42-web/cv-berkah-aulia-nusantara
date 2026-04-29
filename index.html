@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Berkah Aulia Nusantara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+:root {
+  --primary: #16a34a;
+  --primary-dark: #15803d;
+}
+
+/* BACKGROUND */
+body {
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #f3f4f6;
+}
+
+/* overlay halus */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(34,197,94,0.15), transparent 50%);
+  pointer-events: none;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.navbar.scrolled {
+  background: rgba(0,0,0,0.85);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.nav-link {
+  color: #e5e7eb;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #4ade80;
+}
+
+/* HERO */
+.hero-parallax {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.parallax-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: var(--primary);
+  padding: 12px 24px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+/* CARD */
+.glass {
+  background: rgba(255,255,255,0.92);
+  color: #1f2937;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body class="font-sans">
+
+<!-- NAVBAR -->
+<header id="navbar" class="navbar">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+    <div class="flex items-center gap-3">
+      <img src="logo_aulia.png" class="h-12">
+      <h1 class="font-bold text-white">CV BERKAH AULIA NUSANTARA</h1>
+    </div>
+
+    <nav class="hidden md:flex gap-6">
+      <a href="#home" class="nav-link">Beranda</a>
+      <a href="#about" class="nav-link">Profil</a>
+      <a href="#services" class="nav-link">Layanan</a>
+      <a href="#projects" class="nav-link">Proyek</a>
+      <a href="#contact" class="nav-link">Kontak</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero-parallax">
+
+  <div class="parallax-bg" id="parallaxBg"></div>
+  <div class="parallax-overlay"></div>
+
+  <div class="parallax-content max-w-7xl mx-auto px-6 flex items-center h-full">
+    <div>
+
+      <h2 class="text-5xl md:text-6xl font-bold mb-6">
+        Membangun Kualitas <br>
+        <span class="text-green-400">Mewujudkan Masa Depan</span>
+      </h2>
+
+      <p class="text-gray-200 mb-8 max-w-xl">
+        Mitra terpercaya dalam pengadaan ATK dan konstruksi fasilitas pendidikan.
+      </p>
+
+      <div class="flex gap-4">
+        <a href="#projects" class="btn-primary">Lihat Proyek</a>
+        <a href="#about" class="border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition">
+          Tentang Kami
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto py-20 px-6 fade-up">
+  <h2 class="text-3xl font-bold mb-6">Profil Perusahaan</h2>
+  <p class="mb-8 text-gray-200">
+    CV Berkah Aulia Nusantara bergerak di bidang pengadaan barang dan jasa konstruksi pendidikan.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="glass">
+      <h3 class="font-semibold mb-2">Visi</h3>
+      <p>Menjadi mitra terpercaya pembangunan pendidikan.</p>
+    </div>
+    <div class="glass">
+      <h3 class="font-semibold mb-2">Misi</h3>
+      <ul class="list-disc ml-4">
+        <li>Layanan profesional</li>
+        <li>Kualitas terbaik</li>
+        <li>Harga kompetitif</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<!-- SERVICES -->
+<section id="services" class="py-20 fade-up">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Layanan Kami</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- ITEM 1 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=90"
+             class="w-full h-48 object-cover">
+
+        <div class="p-6">
+          <h3 class="font-semibold text-lg mb-2 text-gray-800">Pengadaan ATK</h3>
+          <p class="text-gray-600 text-sm">
+            Pengadaan perlengkapan sekolah melalui SIPLah dan kebutuhan institusi pendidikan.
+          </p>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=2000&q=90"
+             class="w-full h-48 object-cover">
+
+        <div class="p-6">
+          <h3 class="font-semibold text-lg mb-2 text-gray-800">Renovasi Sekolah</h3>
+          <p class="text-gray-600 text-sm">
+            Perbaikan ruang kelas, fasilitas belajar, dan infrastruktur pendidikan.
+          </p>
+        </div>
+      </div>
+
+      <!<!-- ITEM 3 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+  
+  <img 
+    src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2400&q=90"
+    alt="Konstruksi Gedung"
+    class="w-full h-56 object-cover"
+  >
+
+  <div class="p-6">
+    <h3 class="font-semibold text-lg mb-2 text-gray-800">
+      Konstruksi Gedung
+    </h3>
+    <p class="text-gray-600 text-sm">
+      Pembangunan gedung sekolah baru dengan standar kualitas tinggi.
+    </p>
+  </div>
+
+</div>
+
+    </div>
+  </div>
+</section>
+<!-- PROJECTS -->
+<section id="projects" class="max-w-7xl mx-auto py-24 px-6 fade-up">
+
+  <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">
+    Proyek Unggulan
+  </h2>
+
+  <p class="text-center text-gray-300 mb-14 max-w-2xl mx-auto">
+    Portofolio pekerjaan kami dalam bidang pengadaan dan konstruksi fasilitas pendidikan.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- ITEM 1 -->
+    <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+
+      <img 
+        src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=2400&q=90"
+        class="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
+      >
+
+      <!-- overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+      <!-- content -->
+      <div class="absolute bottom-0 p-6 text-white">
+        <span class="text-xs bg-green-500 px-3 py-1 rounded-full">Renovasi</span>
+        <h3 class="text-lg font-semibold mt-3">Renovasi Sekolah Dasar</h3>
+        <p class="text-sm text-gray-300 mt-1">
+          Perbaikan ruang kelas dan fasilitas sekolah agar lebih nyaman dan layak.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+
+      <img 
+        src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2400&q=90"
+        class="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
+      >
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+      <div class="absolute bottom-0 p-6 text-white">
+        <span class="text-xs bg-green-500 px-3 py-1 rounded-full">Pengadaan</span>
+        <h3 class="text-lg font-semibold mt-3">Pengadaan ATK Sekolah</h3>
+        <p class="text-sm text-gray-300 mt-1">
+          Penyediaan perlengkapan sekolah melalui sistem pengadaan resmi.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="group relative overflow-hidden rounded-2xl shadow-xl">
+
+      <img 
+        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2400&q=90"
+        class="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
+      >
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+      <div class="absolute bottom-0 p-6 text-white">
+        <span class="text-xs bg-green-500 px-3 py-1 rounded-full">Konstruksi</span>
+        <h3 class="text-lg font-semibold mt-3">Konstruksi Gedung Sekolah</h3>
+        <p class="text-sm text-gray-300 mt-1">
+          Pembangunan gedung pendidikan baru dengan standar konstruksi modern.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- CONTACT -->
+<section id="contact" class="max-w-7xl mx-auto py-24 px-6 fade-up">
+
+  <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">
+    Hubungi Kami
+  </h2>
+
+  <p class="text-center text-gray-300 mb-14 max-w-2xl mx-auto">
+    Siap bekerja sama? Hubungi kami untuk konsultasi dan penawaran terbaik.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- LEFT INFO -->
+    <div class="space-y-6">
+
+      <div class="glass p-6 rounded-2xl">
+        <h3 class="text-lg font-semibold mb-2 text-gray-800">Alamat</h3>
+        <p class="text-gray-600 text-sm">
+          Jakarta, Indonesia
+        </p>
+      </div>
+
+      <div class="glass p-6 rounded-2xl">
+        <h3 class="text-lg font-semibold mb-2 text-gray-800">Email</h3>
+        <p class="text-gray-600 text-sm">
+          info@perusahaan.co.id
+        </p>
+      </div>
+
+      <div class="glass p-6 rounded-2xl">
+        <h3 class="text-lg font-semibold mb-2 text-gray-800">Telepon</h3>
+        <p class="text-gray-600 text-sm">
+          0812-XXXX-XXXX
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <a href="https://wa.me/6281213608802" target="_blank"
+        class="block text-center bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-semibold transition">
+        Hubungi via WhatsApp
+      </a>
+
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="glass p-8 rounded-2xl">
+
+      <form class="space-y-5">
+
+        <div>
+          <label class="text-sm text-gray-700">Nama</label>
+          <input type="text" placeholder="Nama Anda"
+            class="w-full mt-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+
+        <div>
+          <label class="text-sm text-gray-700">Email</label>
+          <input type="email" placeholder="email@email.com"
+            class="w-full mt-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+
+        <div>
+          <label class="text-sm text-gray-700">Pesan</label>
+          <textarea rows="4" placeholder="Tulis pesan..."
+            class="w-full mt-1 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition">
+          Kirim Pesan
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-6 text-gray-400">
+  © 2026 CV Berkah Aulia Nusantara
+</footer>
+
+<!-- SCRIPT -->
+<script>
+// PARALLAX
+window.addEventListener("scroll", function () {
+  const bg = document.getElementById("parallaxBg");
+  let offset = window.pageYOffset;
+  bg.style.transform = "translateY(" + offset * 0.4 + "px)";
+});
+
+// NAVBAR SCROLL
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+// ANIMATION
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
